@@ -313,5 +313,5 @@ CreateSpotifyPlaylist <- function(artist_name, playlist_name = artist_name, publ
 }
 
 #----TEST THE CODE-------------------# ####
-CreateSpotifyPlaylist('Arctic Monkeys', 'Arctic Monkeys Gig')
+CreateSpotifyPlaylist('Little Simz', 'Little Simz Gig')
 
