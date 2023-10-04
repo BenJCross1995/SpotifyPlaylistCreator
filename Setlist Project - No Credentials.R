@@ -49,7 +49,10 @@ spotify_username <- credentials$spotify_username[[1]]
 client_id <- credentials$client_id[[1]]
 client_secret <- credentials$client_secret[[1]]
 
-access_token <- get_spotify_access_token(client_id, client_secret)  # Gets the access token
+Sys.setenv(SPOTIFY_CLIENT_ID = client_id)
+Sys.setenv(SPOTIFY_CLIENT_SECRET = client_secret)
+
+access_token <- get_spotify_access_token()  # Gets the access token
 
 #----ARTIST INFORMATION FUNCTION-----# ####
 getArtistInfo <- function(artist_name){
@@ -310,5 +313,5 @@ CreateSpotifyPlaylist <- function(artist_name, playlist_name = artist_name, publ
 }
 
 #----TEST THE CODE-------------------# ####
-CreateSpotifyPlaylist('Little Simz', 'Little Simz Gig')
+CreateSpotifyPlaylist('Arctic Monkeys', 'Arctic Monkeys Gig')
 
